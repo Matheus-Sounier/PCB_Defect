@@ -85,3 +85,19 @@ def generate_segmentation(image, detections, labels=None, use_rectangle=True):
             cv2.circle(seg, (int(cx), int(cy)), radius + 5, (0, 0, 255), 2)
             draw_label(i, int(cx) - 60, int(cy) - radius - 10)
     return seg
+
+def build_panel(imgs, titles):
+    h, w = imgs[0].shape[:2]
+    title_bar = 101
+    total_width = w * len(imgs)
+
+    panel = np.ones((h + title_bar, total_width, 3), dtype=np.uint8) * 255
+
+    for i, (img, title) in enumerate(zip(imgs, titles)):
+        if len(img.shape) == 2:
+            img = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
+        panel[title_bar:, i * w:(i + 1) * w] = img
+        cv2.putText(panel, title, (i * w + 10, 28),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 0), 2)
+
+    return panel
