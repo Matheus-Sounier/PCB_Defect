@@ -1,0 +1,69 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Environment / secrets
+.env
+.env.* 
+
+# Test / coverage caches
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Type checkers / caches
+.mypy_cache/
+.dmypy.json
+
+# IDEs / editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Jupyter
+.ipynb_checkpoints
+
+# Build artifacts / installers
+*.whl
+*.egg
+*.tar.gz
+
+# Documentation build
+docs/_build/
+
+# Output folders (generated images/reports) — remove if you want them in repo
+output-img/
+output-json/
+
+# Models / large binary weights — keep out of git if large
+models/*.pt
+models/*.pth
+models/*.ckpt
+*.h5
+
+# PyInstaller
+*.spec
