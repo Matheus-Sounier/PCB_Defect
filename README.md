@@ -4,7 +4,7 @@ This project detects defects in printed circuit boards (PCBs) using a YOLO model
 
 ### Project
 
-<img src="./output-img/result12.jpg" width="1200"/>
+<img width="2560" height="741" alt="Image" src="https://github.com/user-attachments/assets/971588be-6600-4e6b-b372-f754cef440aa" />
 
 ## Required Folders
 
